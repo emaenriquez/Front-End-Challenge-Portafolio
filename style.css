@@ -4,25 +4,29 @@ en las secciones señaladas */
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
+:root {
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-ol, ul,li {
+
+ol,
+ul,
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
@@ -39,53 +43,147 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+/* body {
+    margin: 1rem;
+} */
+
 /*Sección Menu*/
 
-section.menu{
+section.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.menu__header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu__title {
+    font-size: 16px;
+}
+
+.menu__list {
+    display: none;
 }
 
 /*Sección Title*/
 
-section.title{
+section.title {}
 
+.title__profile {
+    width: 98px;
+    height: 98px;
+    margin-top: 1rem;
+}
+
+.title__bio {
+    width: 328px;
+    height: 52px;
+    font-family: Raleway;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25.83px;
+    text-align: left;
+}
+
+.title__subsection {
+    width: 328px;
+    height: 48px;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.44px;
+    text-align: left;
+}
+
+.title__network {
+    display: flex;
+    width: Hug (318px)px;
+    height: Hug (16px)px;
+    gap: 8px;
 }
 
 /*Sección About*/
 
-section.about{
-
+section.about {
+    background-color: #EAF2FD;
 }
 
-/*Sección Hobbies*/
+.about__container {
+    padding: 1rem;
+}
 
-section.hobbies{
-    
+/* Seccion Skills */
+
+section.skills {}
+
+.skills__title , .hobbies__title {
+    font-size: 22px;
+    line-height: 25.83px;
+    text-align: center;
+}
+
+.skills__line , .hobbies__line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 8px;
+}
+.skills__box , .hobbies__box {
+    width: 156px;
+    height: 118px;
+    padding: 16px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    background: #FFFFFF;
+    padding: 16px 0px 0px 0px ;
+}
+
+/*  */
+.skills__img  , .hobbies__img {
+    width: 24px;
+    height: 37px;
+}
+
+.skills__name , .hobbies__name {
+    font-weight: 700;
+    line-height: 18.78px;
 }
 
 /* Experiencia Académica*/
 
-section.academic{
-
+section.academic {
+    background: #EAF2FD;
 }
+
+.academic__title {
+    height: 26px;
+    font-family: Raleway;
+    font-size: 22px;
+    line-height: 25.83px;
+    text-align: center;
+    margin:1rem;
+}
+.academic__courses__item__img {
+    width: 100%;
+}
+
 
 /* experiencia*/
 
-section.experience{
-
-}
+section.experience {}
 
 /*Contacto*/
 
-section.formcontato{
-
-}
+section.formcontato {}
 
 /*footeer*/
 
-section.footer{
-   
-}
+section.footer {}
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
@@ -94,39 +192,39 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Tablet*/
 @media (min-width: 768px) {
 
-/* Menú */
+    /* Menú */
 
-/*title*/
+    /*title*/
 
-/*Skills*/
+    /*Skills*/
 
-/*Hobbies*/
+    /*Hobbies*/
 
-/*Formación Académica*/
+    /*Formación Académica*/
 
-/*Experiencia Profesional*/
+    /*Experiencia Profesional*/
 
 }
 
 /*Mobile*/
 @media (min-width: 425px) {
 
-/*Menu*/
+    /*Menu*/
 
-/*Titulo*/
+    /*Titulo*/
 
-/*Sección sobre mi*/
+    /*Sección sobre mi*/
 
-/*Skills*/
+    /*Skills*/
 
-/*Hobbies*/
- 
-/*Formación Académica*/
+    /*Hobbies*/
 
-/*Experiencia Profesional*/
+    /*Formación Académica*/
 
- /*Contacto*/
+    /*Experiencia Profesional*/
 
-/*Footer*/
+    /*Contacto*/
+
+    /*Footer*/
 
 }
